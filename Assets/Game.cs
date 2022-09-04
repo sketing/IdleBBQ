@@ -46,6 +46,6 @@ public class Game : MonoBehaviour
 
     private void Update()
     {
-        ui.text = "Meows: " + GameManager.meows;
+        ui.text = GameManager.meows.ToString();
     }
 }
