@@ -11,6 +11,7 @@ public class Game : MonoBehaviour
     {
         GameManager.meows += GameManager.multiplier;
         PlayerPrefs.SetInt("meows", GameManager.meows);
+        ButtonPlay();
     }
 
     public void Buy(int num)
@@ -36,6 +37,11 @@ public class Game : MonoBehaviour
             PlayerPrefs.SetInt("meows", GameManager.meows);
             PlayerPrefs.SetInt("multiplier", GameManager.multiplier);
         }
+    }
+
+    private void ButtonPlay()
+    {
+        SoundControl.soundControl.PlayButtonSound();
     }
 
     private void Update()
